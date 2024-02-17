@@ -7,7 +7,9 @@ function writeToFile(file, data) {
   fs.writeFile(file, data, (err) =>
     err
       ? console.log("Error occured when writing file")
-      : console.log("Success in creating your README.md file")
+      : console.log(
+          "Success! Find your new ReadMe under the GeneratedReadMe folder"
+        )
   );
 }
 
@@ -26,11 +28,12 @@ const generateReadMe = ({
   return `# ${title}
   ## Table of Contents 
 
-  - [Description](#project-description)
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Testing](#testing)
+  - [Credits](#credits)
+  - [Tests](#tests)
+  - [License](#license)
   - [Questions](#questions)
 
 ## Description
@@ -54,7 +57,7 @@ ${test}
 
 ## License
 
-${license}
+![Static Badge](https://img.shields.io/badge/${license}-blue)
 
 ## Questions
 
@@ -77,12 +80,12 @@ const questions = [
   },
   {
     type: "input",
-    message: "What are the steps required to install your project?",
+    message: "Provide instructions on how to install your project",
     name: "installation",
   },
   {
     type: "input",
-    message: "Provide instructions and examples for use: ",
+    message: "Provide an explanation on how this project will be used: ",
     name: "usage",
   },
   {
@@ -92,15 +95,14 @@ const questions = [
   },
   {
     type: "input",
-    message:
-      "Go the extra mile and write tests for your application.Then provide examples on how to run them here. ",
+    message: "Provide instructions on how users can test your project. ",
     name: "test",
   },
   {
     type: "checkbox",
     message: "What license do you want to use?",
     name: "license",
-    choices: ["MIT", "Option1", "Option2", "Option3", "FOption4"],
+    choices: ["Apache_2.0", "MIT", "GPL_3.0"],
   },
   {
     type: "input",
@@ -117,12 +119,17 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((data) => {
-    console.log(data);
+    // console.log(data);
     //create a file with the name of the github on it
-    const name = ({ github }) => {
-      return github;
+    const projectName = ({ title }) => {
+      return title;
     };
-    writeToFile(`${name(data)}_README.md`, generateReadMe(data));
+    writeToFile(
+      `/Users/nellylopez/bootcamp/homework/homework-9/ReadMe-Generator/GeneratedReadMe/${projectName(
+        data
+      )}_README.md`,
+      generateReadMe(data)
+    );
   });
 }
 
