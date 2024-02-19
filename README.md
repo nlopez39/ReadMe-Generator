@@ -16,7 +16,7 @@ This app allows users to automatically generate a Readme Markdown file from the 
 
 ### Demo
 
-![Demo Video](https://drive.google.com/file/d/1W_8fi8x5Fzk7a_i5nbnjYTYQwh5beSVq/view)
+[Demo Video](https://drive.google.com/file/d/1W_8fi8x5Fzk7a_i5nbnjYTYQwh5beSVq/view)
 
 ## Installation
 
