@@ -24,7 +24,7 @@ To install this project into your own, use git clone in your command-line.
 
 ## Usage
 
-To use this project, go to the cloned files, then type node index.js in your terminal. Be sure you’re in the correct location in your terminal first!
+To use this project, go to the cloned files, then type `node index.js` in your terminal. Be sure you’re in the correct location in your terminal first!
 
 ## Credits
 
