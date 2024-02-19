@@ -1,4 +1,4 @@
-# ReadMe-Generator
+# ReadMe Generator
 
 ## Table of Contents
 
@@ -30,10 +30,6 @@ To use this project, go to the cloned files, then type node index.js in your ter
 
 https://www.npmjs.com/package/inquirer
 
-https://shields.io/badges
-
-https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-
 ## Tests
 
 Feel free to play around with the code and use your own data.
@@ -44,6 +40,6 @@ Feel free to play around with the code and use your own data.
 
 ## Questions
 
-Link to my Github Profile: https://github.com/nlopez39
+Link to my Github Profile: https://github.com/nlopez1399
 
 You can reach me at : nellymlopez3@gmail.com
